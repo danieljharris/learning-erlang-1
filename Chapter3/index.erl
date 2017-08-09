@@ -56,6 +56,5 @@ compress([Head,Next|Tail], Output) ->
 		(Next - Head) >= 1 -> compress([Next|Tail], Output ++ [Head])
 	end.
 
-
 %%Use shell:string(false).
 %char_to_integer(Char) -> lists:flatten(io_lib:format("~p", [Char])).
