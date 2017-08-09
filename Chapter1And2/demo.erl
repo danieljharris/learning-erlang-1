@@ -16,7 +16,8 @@
 %Hello world
 %This is a comment
 
-double(Value) -> times(Value, 2).times(X,Y) -> X*Y.
+double(Value) -> times(Value, 2).
+times(X,Y) -> X*Y.
 
 bump([]) -> [];
 bump([Head|Tail]) -> [Head+1|bump(Tail)].
@@ -42,7 +43,9 @@ fizz_buzz(Val) -> Val.
 reverse([]) -> [];
 reverse([Head|Tail]) -> reverse(Tail)++[Head].
 
-%reverse(List) -> reverse_acc(List, []).%reverse_acc([], Acc) -> Acc;%reverse_acc([H | T], Acc) -> reverse_acc(T, [H | Acc]).
+%reverse(List) -> reverse_acc(List, []).
+%reverse_acc([], Acc) -> Acc;
+%reverse_acc([H | T], Acc) -> reverse_acc(T, [H | Acc]).
 
 %For loops ***********************************************************************
 %Make me a list of numbers from 1 to 100
