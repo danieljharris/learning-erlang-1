@@ -52,9 +52,10 @@ compress([Head|Tail], Output) when (Tail - Head) >= 1 -> Output ++ [Head];
 compress([Head,Next|Tail], Output) ->
 	if
 		(Next - Head) == 0 -> compress([Head|Tail], Output);
-		(Next - Head) == 1 -> compress([Next|Tail], Output ++ [Head] ++ ["-"] );
+		(Next - Head) == 1 -> compress([Next|Tail], Output ++ [Head] ++ ["+"] );
 		(Next - Head) >= 1 -> compress([Next|Tail], Output ++ [Head])
 	end.
+
 
 %%Use shell:string(false).
 %char_to_integer(Char) -> lists:flatten(io_lib:format("~p", [Char])).
